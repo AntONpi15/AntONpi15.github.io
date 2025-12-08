@@ -140,6 +140,14 @@
       color: var(--gray);
     }
 
+    .highlight {
+      background-color: #fff8e1;
+      padding: 15px;
+      border-left: 4px solid #ffc107;
+      margin: 20px 0;
+      border-radius: 8px;
+    }
+
     /* Planificación */
     .planning-table {
       width: 100%;
@@ -263,9 +271,22 @@
     <!-- Tab: Beneficios -->
     <div class="tab-content active" id="beneficios">
       <p>
-        Todos los componentes de este proyecto han sido desarrollados en alineación con las mejores prácticas descritas en el PMBOK® Guía Séptima Edición, asegurando gobernanza, trazabilidad y valor entregado al negocio.
+        Todos los componentes de este proyecto han sido desarrollados en alineación con las mejores prácticas descritas en el <strong>PMBOK® Guía Séptima Edición</strong>, asegurando gobernanza, trazabilidad y entrega de valor estratégico.
       </p>
-      <h2>¿Por qué este canal beneficia a nuestra UTA?</h2>
+
+      <div class="highlight">
+        <strong>¿Por qué este canal universitario es necesario?</strong><br>
+        No es solo un medio de comunicación: es una plataforma de <em>extensión universitaria</em> que conecta la academia con la sociedad. Difunde investigación, educa en ciudadanía, visibiliza la cultura local y responde a brechas informativas en zonas marginadas.
+      </div>
+
+      <h3>Zonas de Impacto Geográfico</h3>
+      <ul style="margin-left: 20px; margin-top: 10px; margin-bottom: 20px;">
+        <li><strong>Zona urbana:</strong> Ciudad universitaria y periferia inmediata.</li>
+        <li><strong>Zona rural:</strong> 12 municipios sin cobertura mediática privada.</li>
+        <li><strong>Zona digital:</strong> Audiencia en línea mediante redes sociales y streaming.</li>
+      </ul>
+
+      <h2>Beneficios Clave para la UTA</h2>
       <div class="benefits-grid">
         <div class="benefit-card">
           <h3>🎓 Formación Integral</h3>
@@ -289,7 +310,7 @@
         </div>
         <div class="benefit-card">
           <h3>📺 Impacto Social</h3>
-          <p>Acceso universal al conocimiento científico y cultural.</p>
+          <p>Acceso universal al conocimiento científico y cultural en zonas marginadas.</p>
         </div>
       </div>
     </div>
@@ -299,8 +320,8 @@
       <h2>Indicadores Clave de Éxito (KPIs)</h2>
       <div class="kpis">
         <div class="kpi-card">
-          <div class="value">3.5x</div>
-          <div class="label">ROI educativo estimado</div>
+          <div class="value">42–68%</div>
+          <div class="label">ROI estimado (Año 3–5)</div>
         </div>
         <div class="kpi-card">
           <div class="value">120+</div>
@@ -312,12 +333,16 @@
         </div>
       </div>
 
+      <div class="highlight">
+        <strong>Relación costo-beneficio:</strong> Cada dólar invertido impacta directamente a <em>1 estudiante</em> y <em>1,000 ciudadanos</em>. Revisa el <em>dashboard de Anthony</em> para ver la simulación interactiva de estos indicadores.
+      </div>
+
       <h3>Proyección a 5 años (2025–2030)</h3>
       <div class="chart-container">
         <canvas id="proyeccionChart"></canvas>
       </div>
       <p>
-        La curva de crecimiento refleja el impacto transformador del canal universitario: el <strong>alcance</strong> se multiplica al llegar a 250K personas; el <strong>prestigio</strong> institucional crece por la visibilidad de la investigación y la extensión; y la <strong>formación estudiantil</strong> escala desde pruebas iniciales hasta consolidar un flujo sostenido de 120 estudiantes anuales en prácticas reales, alineado con el enfoque de valor del PMBOK® 7.
+        El crecimiento se fundamenta en el plan de expansión del canal: <strong>Año 1</strong> (señal local + web), <strong>Año 3</strong> (alianzas regionales), <strong>Año 5</strong> (plataforma con contenido replicable en otras universidades).
       </p>
 
       <h3 style="margin-top: 40px;">Impacto del Alineamiento con el PMBOK®</h3>
@@ -370,19 +395,19 @@
         <tbody>
           <tr>
             <td>Rectora (Sponsor)</td>
-            <td>Alto</td>
+            <td>Visibilidad institucional y ROI</td>
             <td>Alta</td>
             <td>Implicar en decisiones clave</td>
           </tr>
           <tr>
             <td>Estudiantes</td>
-            <td>Alto</td>
+            <td>Formación práctica y empleabilidad</td>
             <td>Baja</td>
             <td>Involucrar en producción y feedback</td>
           </tr>
           <tr>
             <td>Proveedores</td>
-            <td>Medio</td>
+            <td>Contratos sostenibles y pagos puntuales</td>
             <td>Media</td>
             <td>Gestionar contratos y SLAs</td>
           </tr>
@@ -402,28 +427,22 @@
         </thead>
         <tbody>
           <tr>
-            <td>Gestión del Proyecto</td>
+            <td>Aprobación presupuestaria</td>
             <td class="raci-cell A">A</td>
-            <td class="raci-cell I">I</td>
             <td class="raci-cell C">C</td>
+            <td class="raci-cell I">I</td>
           </tr>
           <tr>
-            <td>Estudio Técnico</td>
+            <td>Producción de contenidos</td>
             <td class="raci-cell C">C</td>
-            <td class="raci-cell I">I</td>
             <td class="raci-cell R">R</td>
+            <td class="raci-cell S">S</td>
           </tr>
           <tr>
-            <td>Producción Contenido</td>
+            <td>Mantenimiento técnico</td>
+            <td class="raci-cell I">I</td>
             <td class="raci-cell C">C</td>
-            <td class="raci-cell A">A</td>
-            <td class="raci-cell I">I</td>
-          </tr>
-          <tr>
-            <td>Cierre del Proyecto</td>
             <td class="raci-cell R">R</td>
-            <td class="raci-cell I">I</td>
-            <td class="raci-cell I">I</td>
           </tr>
         </tbody>
       </table>
@@ -440,19 +459,19 @@
         </thead>
         <tbody>
           <tr>
-            <td>Retraso en aprobación ARCOTEL</td>
+            <td>Retraso en licencias de transmisión</td>
             <td style="background: var(--danger); color: white;">Crítico</td>
-            <td>Iniciar trámites con 3 meses de anticipación.</td>
-          </tr>
-          <tr>
-            <td>Falta de presupuesto</td>
-            <td style="background: var(--warning); color: black;">Alto</td>
-            <td>Buscar fondos de extensión y cooperación.</td>
+            <td>Asesoría legal interna + trámites anticipados.</td>
           </tr>
           <tr>
             <td>Baja participación estudiantil</td>
+            <td style="background: var(--warning); color: black;">Alto</td>
+            <td>Creditaje académico, certificaciones y mentorías.</td>
+          </tr>
+          <tr>
+            <td>Fallas técnicas</td>
             <td style="background: var(--secondary); color: white;">Medio</td>
-            <td>Incentivos académicos y créditos prácticos.</td>
+            <td>Redundancia y monitoreo con NetWatch + alertas.</td>
           </tr>
         </tbody>
       </table>
@@ -469,7 +488,11 @@
             <canvas id="presupuestoChart"></canvas>
           </div>
           <p>
-            La inversión total de US$250,000 se distribuye en: Equipamiento ($120,000), Infraestructura ($60,000), Personal ($40,000), Producción ($20,000) y Capacitación ($10,000).
+            Equipos audiovisuales: <strong>$120,000 (48%)</strong><br>
+            Capacitación y talento: <strong>$50,000 (20%)</strong><br>
+            Infraestructura de transmisión: <strong>$45,000 (18%)</strong><br>
+            Contingencia y operación (12 meses): <strong>$25,000 (10%)</strong><br>
+            Marketing y lanzamiento: <strong>$10,000 (4%)</strong>
           </p>
         </div>
 
@@ -479,6 +502,12 @@
           <div class="chart-container">
             <canvas id="contenidoChart"></canvas>
           </div>
+          <p>
+            Contenido educativo: <strong>40%</strong><br>
+            Noticias locales y regionales: <strong>25%</strong><br>
+            Cultura y entretenimiento universitario: <strong>20%</strong><br>
+            Investigación y divulgación científica: <strong>15%</strong>
+          </p>
         </div>
       </div>
     </div>
@@ -615,9 +644,9 @@
     new Chart(ctxPres, {
       type: 'pie',
       data: {
-        labels: ['Equipamiento', 'Infraestructura', 'Personal', 'Producción', 'Capacitación'],
+        labels: ['Equipos audiovisuales', 'Capacitación y talento', 'Infraestructura', 'Contingencia', 'Marketing'],
         datasets: [{
-          data: [120000, 60000, 40000, 20000, 10000],
+          data: [120000, 50000, 45000, 25000, 10000],
           backgroundColor: ['#0d3b66','#4a90e2','#28a745','#ffc107','#6c757d'],
           borderWidth: 1
         }]
@@ -636,9 +665,9 @@
     new Chart(ctxCont, {
       type: 'pie',
       data: {
-        labels: ['Académico/Científico', 'Formativo/Estudiantil', 'Cultural/Comunitario', 'Informativo'],
+        labels: ['Contenido educativo', 'Noticias locales', 'Cultura y entretenimiento', 'Investigación científica'],
         datasets: [{
-          data: [40, 30, 20, 10],
+          data: [40, 25, 20, 15],
           backgroundColor: ['#0d3b66','#4a90e2','#28a745','#ffc107'],
           borderWidth: 1
         }]
