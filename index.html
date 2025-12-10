@@ -259,19 +259,17 @@
       <p>Dashboard UTA TV | Diciembre 2025</p>
     </header>
 
-    <!-- Tabs -->
     <div class="tabs">
       <div class="tab active" data-tab="beneficios">Beneficios</div>
       <div class="tab" data-tab="kpi">KPIs</div>
-      <div class="tab" data-tab="gantt">Planificación</div>
+      <div class="tab" data-tab="operativa">Métricas Operativas</div> <div class="tab" data-tab="gantt">Planificación</div>
       <div class="tab" data-tab="matrices">Interesados-Riesgos</div>
       <div class="tab" data-tab="presupuesto">Presupuesto</div>
     </div>
 
-    <!-- Tab: Beneficios -->
     <div class="tab-content active" id="beneficios">
       <p>
-        Todos los componentes de este proyecto han sido desarrollados en alineación con las mejores prácticas descritas en el <strong>PMBOK® Guía Séptima Edición</strong>, asegurando gobernanza, trazabilidad y entrega de valor estratégico.
+        Todos los componentes de este proyecto han sido desarrollados en alineación con las mejores prácticas descritas en el <strong>PMBOK® Guía Séptima Edición</strong>, asegurando sostenibilidad, trazabilidad y entrega de valor estratégico.
       </p>
 
       <div class="highlight">
@@ -282,8 +280,8 @@
       <h3>Zonas de Impacto Geográfico</h3>
       <ul style="margin-left: 20px; margin-top: 10px; margin-bottom: 20px;">
         <li><strong>Zona urbana:</strong> Ambato.</li>
-        <li><strong>Zona rural:</strong> 12 municipios entre Tisaleo, Mocha, Latacunga.</li>
-        <li><strong>Zona digital:</strong> Audiencia en línea mediante redes sociales y streaming.</li>
+        <li><strong>Zona rural:</strong>Tisaleo, Mocha, Latacunga, Patate, Saquisilí, Quero, Cevallos, Santiago de Píllaro, Pelileo, Pujilí.</li>
+        <li><strong>Zona digital:</strong> Audiencia global</li>
       </ul>
 
       <h2>Beneficios Clave para la UTA</h2>
@@ -315,7 +313,6 @@
       </div>
     </div>
 
-    <!-- Tab: KPIs -->
     <div class="tab-content" id="kpi">
       <h2>Indicadores Clave de Éxito (KPIs)</h2>
       <div class="kpis">
@@ -334,7 +331,7 @@
       </div>
 
       <div class="highlight">
-        <strong>Relación costo-beneficio:</strong> Cada dólar invertido impacta directamente a <em>1 estudiante</em> y <em>1,000 ciudadanos</em>. Revisa el <em>dashboard de Anthony</em> para ver la simulación interactiva de estos indicadores.
+        <strong>Relación costo-beneficio:</strong> Cada dólar invertido impacta directamente a <em>1 estudiante</em> y <em>1,000 ciudadanos</em>. 
       </div>
 
       <h3>Proyección a 5 años (2025–2030)</h3>
@@ -354,7 +351,34 @@
       </div>
     </div>
 
-    <!-- Tab: Planificación -->
+    <div class="tab-content" id="operativa">
+      <h2>Métricas Operativas y Académicas</h2>
+      <p>Monitoreo del desempeño técnico del canal y del crecimiento profesional de los estudiantes involucrados.</p>
+      
+      <div class="graficos-grid">
+        <div>
+          <h3>Competencias Estudiantiles (Promedio)</h3>
+          <p style="font-size: 0.9em; color: var(--gray);">Evaluación de habilidades antes y después de las pasantías en el canal.</p>
+          <div class="chart-container">
+            <canvas id="skillsChart"></canvas>
+          </div>
+        </div>
+        
+        <div>
+          <h3>Audiencia: Señal Abierta vs. Digital</h3>
+          <p style="font-size: 0.9em; color: var(--gray);">Comparativa mensual de espectadores (en miles).</p>
+          <div class="chart-container">
+            <canvas id="audienciaChart"></canvas>
+          </div>
+        </div>
+      </div>
+
+      <h3 style="margin-top: 30px;">Aporte de Contenido por Facultad</h3>
+      <div class="chart-container" style="height: 280px;">
+        <canvas id="facultadChart"></canvas>
+      </div>
+    </div>
+
     <div class="tab-content" id="gantt">
       <h2>Plan de Implementación del Canal Universitario</h2>
       <table class="planning-table">
@@ -377,11 +401,9 @@
       </p>
     </div>
 
-    <!-- Tab: Interesados-Riesgos -->
     <div class="tab-content" id="matrices">
       <h2>Interesados y Riesgos</h2>
 
-      <!-- Matriz de Interesados -->
       <h3>Matriz de Interesados</h3>
       <table class="matrix">
         <thead>
@@ -414,7 +436,6 @@
         </tbody>
       </table>
 
-      <!-- Matriz RACI -->
       <h3>Matriz RACI</h3>
       <table class="matrix">
         <thead>
@@ -447,7 +468,6 @@
         </tbody>
       </table>
 
-      <!-- Matriz de Riesgos -->
       <h3>Matriz de Riesgos Clave</h3>
       <table class="matrix">
         <thead>
@@ -477,11 +497,9 @@
       </table>
     </div>
 
-    <!-- Tab: Presupuesto -->
     <div class="tab-content" id="presupuesto">
       <h2>Distribución del Presupuesto y Programación</h2>
       <div class="graficos-grid">
-        <!-- Columna Izquierda -->
         <div>
           <h3>Distribución del Presupuesto Total (US$250,000)</h3>
           <div class="chart-container">
@@ -496,7 +514,6 @@
           </p>
         </div>
 
-        <!-- Columna Derecha -->
         <div>
           <h3>Composición de la Programación</h3>
           <div class="chart-container">
@@ -519,7 +536,7 @@
   </div>
 
   <script>
-    // Tabs
+    // Tabs Logic
     document.querySelectorAll('.tab').forEach(tab => {
       tab.addEventListener('click', () => {
         document.querySelectorAll('.tab').forEach(t => t.classList.remove('active'));
@@ -528,6 +545,8 @@
         document.getElementById(tab.dataset.tab).classList.add('active');
       });
     });
+
+    // --- GRÁFICOS ORIGINALES ---
 
     // Gráfico: Proyección 5 años
     const ctxProj = document.getElementById('proyeccionChart').getContext('2d');
@@ -564,24 +583,14 @@
       },
       options: {
         responsive: true,
+        maintainAspectRatio: false,
         plugins: {
           legend: { position: 'top' },
           tooltip: { callbacks: { label: (ctx) => `${ctx.dataset.label}: ${ctx.parsed.y}` } }
         },
         scales: {
-          x: {
-            title: {
-              display: true,
-              text: 'Año'
-            }
-          },
-          y: {
-            beginAtZero: true,
-            title: {
-              display: true,
-              text: 'Valor'
-            }
-          }
+          x: { title: { display: true, text: 'Año' } },
+          y: { beginAtZero: true }
         }
       }
     });
@@ -611,30 +620,10 @@
       },
       options: {
         responsive: true,
+        maintainAspectRatio: false,
         indexAxis: 'y',
         scales: {
-          x: {
-            beginAtZero: true,
-            max: 100,
-            title: {
-              display: true,
-              text: 'Porcentaje (%)'
-            }
-          },
-          y: {
-            title: {
-              display: true,
-              text: 'Métrica de desempeño'
-            }
-          }
-        },
-        plugins: {
-          legend: { position: 'top' },
-          tooltip: {
-            callbacks: {
-              label: (ctx) => `${ctx.dataset.label}: ${ctx.parsed.x}%`
-            }
-          }
+          x: { beginAtZero: true, max: 100, title: { display: true, text: 'Porcentaje (%)' } }
         }
       }
     });
@@ -653,6 +642,7 @@
       },
       options: {
         responsive: true,
+        maintainAspectRatio: false,
         plugins: {
           legend: { position: 'bottom' },
           tooltip: { callbacks: { label: (ctx) => `${ctx.label}: $${ctx.raw.toLocaleString()}` } }
@@ -674,9 +664,98 @@
       },
       options: {
         responsive: true,
+        maintainAspectRatio: false,
         plugins: {
           legend: { position: 'bottom' },
           tooltip: { callbacks: { label: (ctx) => `${ctx.label}: ${ctx.raw}%` } }
+        }
+      }
+    });
+
+    // --- GRÁFICOS NUEVOS (MÉTRICAS OPERATIVAS) ---
+
+    // 1. Radar: Competencias Estudiantes
+    const ctxSkills = document.getElementById('skillsChart').getContext('2d');
+    new Chart(ctxSkills, {
+      type: 'radar',
+      data: {
+        labels: ['Cámara/Imagen', 'Edición Video', 'Guion', 'Iluminación', 'Periodismo', 'Sonido'],
+        datasets: [{
+          label: 'Nivel Promedio (Escala 1-10)',
+          data: [8.5, 9.0, 7.5, 6.0, 8.0, 7.0],
+          fill: true,
+          backgroundColor: 'rgba(74, 144, 226, 0.2)',
+          borderColor: '#4a90e2',
+          pointBackgroundColor: '#0d3b66',
+          pointBorderColor: '#fff',
+          pointHoverBackgroundColor: '#fff',
+          pointHoverBorderColor: '#0d3b66'
+        }]
+      },
+      options: {
+        responsive: true,
+        maintainAspectRatio: false,
+        elements: {
+          line: { borderWidth: 3 }
+        },
+        scales: {
+          r: {
+            angleLines: { display: false },
+            suggestedMin: 0,
+            suggestedMax: 10
+          }
+        }
+      }
+    });
+
+    // 2. Barras: Audiencia TV vs Digital
+    const ctxAud = document.getElementById('audienciaChart').getContext('2d');
+    new Chart(ctxAud, {
+      type: 'bar',
+      data: {
+        labels: ['Ene', 'Feb', 'Mar', 'Abr', 'May', 'Jun'],
+        datasets: [
+          {
+            label: 'TV Señal Abierta',
+            data: [120, 130, 125, 140, 150, 155],
+            backgroundColor: '#0d3b66',
+          },
+          {
+            label: 'Streaming Web/Redes',
+            data: [40, 55, 70, 85, 95, 110],
+            backgroundColor: '#28a745',
+          }
+        ]
+      },
+      options: {
+        responsive: true,
+        maintainAspectRatio: false,
+        scales: {
+          y: { beginAtZero: true, title: {display: true, text: 'Espectadores (Miles)'} }
+        }
+      }
+    });
+
+    // 3. Barras Horizontal: Producción por Facultad
+    const ctxFac = document.getElementById('facultadChart').getContext('2d');
+    new Chart(ctxFac, {
+      type: 'bar',
+      data: {
+        labels: ['Ing. Sistemas (FSEI)', 'Ciencias de la Salud', 'Diseño y Artes', 'Ciencias Humanas', 'Administración'],
+        datasets: [{
+          label: 'Horas de Contenido Producido',
+          data: [45, 30, 60, 40, 25],
+          backgroundColor: ['#0d3b66', '#dc3545', '#ffc107', '#4a90e2', '#6c757d'],
+          borderRadius: 4
+        }]
+      },
+      options: {
+        responsive: true,
+        maintainAspectRatio: false,
+        indexAxis: 'y',
+        plugins: { legend: { display: false } },
+        scales: {
+          x: { beginAtZero: true }
         }
       }
     });
