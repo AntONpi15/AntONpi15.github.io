@@ -250,6 +250,27 @@
       text-align: center;
       border-top: 1px solid #eee;
     }
+
+    /* Botón de mostrar beneficios */
+    .reveal-btn {
+      background: var(--primary);
+      color: white;
+      border: none;
+      padding: 12px 24px;
+      font-size: 1rem;
+      border-radius: 6px;
+      cursor: pointer;
+      margin: 20px 0;
+      transition: background 0.3s;
+    }
+    .reveal-btn:hover {
+      background: var(--secondary);
+    }
+
+    /* Contenido oculto de beneficios */
+    #benefits-hidden {
+      display: none;
+    }
   </style>
 </head>
 <body>
@@ -262,7 +283,8 @@
     <div class="tabs">
       <div class="tab active" data-tab="beneficios">Beneficios</div>
       <div class="tab" data-tab="kpi">KPIs</div>
-      <div class="tab" data-tab="operativa">Métricas Operativas</div> <div class="tab" data-tab="gantt">Planificación</div>
+      <div class="tab" data-tab="operativa">Métricas Operativas</div>
+      <div class="tab" data-tab="gantt">Planificación</div>
       <div class="tab" data-tab="matrices">Interesados-Riesgos</div>
       <div class="tab" data-tab="presupuesto">Presupuesto</div>
     </div>
@@ -272,43 +294,40 @@
         Todos los componentes de este proyecto han sido desarrollados en alineación con las mejores prácticas descritas en el <strong>PMBOK® Guía Séptima Edición</strong>, asegurando sostenibilidad, trazabilidad y entrega de valor estratégico.
       </p>
 
-      <div class="highlight">
-        <strong>¿Por qué este canal universitario es necesario?</strong><br>
-        No es solo un medio de comunicación: es una plataforma de <em>extensión universitaria</em> que conecta la academia con la sociedad. Difunde investigación, educa en ciudadanía, visibiliza la cultura local y responde a brechas informativas en zonas marginadas.
-      </div>
+      <button class="reveal-btn" id="showBenefitsBtn">Mostrar Beneficios</button>
 
-      <h3>Zonas de Impacto Geográfico</h3>
-      <ul style="margin-left: 20px; margin-top: 10px; margin-bottom: 20px;">
-        <li><strong>Zona urbana:</strong> Ambato.</li>
-        <li><strong>Zona rural:</strong>Tisaleo, Mocha, Latacunga, Patate, Saquisilí, Quero, Cevallos, Santiago de Píllaro, Pelileo, Pujilí.</li>
-        <li><strong>Zona digital:</strong> Audiencia global</li>
-      </ul>
+      <div id="benefits-hidden">
+        <div class="highlight">
+          <strong>¿Por qué este canal universitario es necesario?</strong><br>
+          No es solo un medio de comunicación: es una plataforma de <em>extensión universitaria</em> que conecta la academia con la sociedad. Difunde investigación, educa en ciudadanía, visibiliza la cultura local y responde a brechas informativas en zonas marginadas.
+        </div>
 
-      <h2>Beneficios Clave para la UTA</h2>
-      <div class="benefits-grid">
-        <div class="benefit-card">
-          <h3>🎓 Formación Integral</h3>
-          <p>Estudiantes aplican conocimientos en entornos reales de producción audiovisual.</p>
-        </div>
-        <div class="benefit-card">
-          <h3>🔬 Investigación Visible</h3>
-          <p>Difusión masiva de ciencia, innovación y proyectos universitarios.</p>
-        </div>
-        <div class="benefit-card">
-          <h3>🌐 Marca Institucional</h3>
-          <p>Posicionamiento como líder en comunicación educativa y tecnológica.</p>
-        </div>
-        <div class="benefit-card">
-          <h3>💰 Sostenibilidad</h3>
-          <p>Bajo costo operativo tras la inversión inicial; modelo autosostenible.</p>
-        </div>
-        <div class="benefit-card">
-          <h3>🤝 Alianzas Estratégicas</h3>
-          <p>Fortalece vínculos con gobierno, sector privado y comunidad local.</p>
-        </div>
-        <div class="benefit-card">
-          <h3>📺 Impacto Social</h3>
-          <p>Acceso universal al conocimiento científico y cultural en zonas marginadas.</p>
+        <h2>Beneficios Clave para la UTA</h2>
+        <div class="benefits-grid">
+          <div class="benefit-card">
+            <h3>🎓 Formación Integral</h3>
+            <p>Estudiantes aplican conocimientos en entornos reales de producción audiovisual.</p>
+          </div>
+          <div class="benefit-card">
+            <h3>🔬 Investigación Visible</h3>
+            <p>Difusión masiva de ciencia, innovación y proyectos universitarios.</p>
+          </div>
+          <div class="benefit-card">
+            <h3>🌐 Marca Institucional</h3>
+            <p>Posicionamiento como líder en comunicación educativa y tecnológica.</p>
+          </div>
+          <div class="benefit-card">
+            <h3>💰 Sostenibilidad</h3>
+            <p>Bajo costo operativo tras la inversión inicial; modelo autosostenible.</p>
+          </div>
+          <div class="benefit-card">
+            <h3>🤝 Alianzas Estratégicas</h3>
+            <p>Fortalece vínculos con gobierno, sector privado y comunidad local.</p>
+          </div>
+          <div class="benefit-card">
+            <h3>📺 Impacto Social</h3>
+            <p>Acceso universal al conocimiento científico y cultural en zonas marginadas.</p>
+          </div>
         </div>
       </div>
     </div>
@@ -355,6 +374,14 @@
       <h2>Métricas Operativas y Académicas</h2>
       <p>Monitoreo del desempeño técnico del canal y del crecimiento profesional de los estudiantes involucrados.</p>
       
+      <!-- Sección trasladada: Zonas de Impacto Geográfico -->
+      <h3>Zonas de Impacto Geográfico</h3>
+      <ul style="margin-left: 20px; margin-top: 10px; margin-bottom: 20px;">
+        <li><strong>Zona urbana:</strong> Ambato.</li>
+        <li><strong>Zona rural:</strong> Tisaleo, Mocha, Latacunga, Patate, Saquisilí, Quero, Cevallos, Santiago de Píllaro, Pelileo, Pujilí.</li>
+        <li><strong>Zona digital:</strong> Audiencia global</li>
+      </ul>
+
       <div class="graficos-grid">
         <div>
           <h3>Competencias Estudiantiles (Promedio)</h3>
@@ -389,7 +416,7 @@
           </tr>
         </thead>
         <tbody>
-          <tr><td>Planificación y permisos</td><td style="text-align: center;">1 mes</td></tr>
+          <tr><td>Planificación y permisos</td><td style="text-align: center;">2-4 meses</td></tr>
           <tr><td>Adecuación del área</td><td style="text-align: center;">2 meses</td></tr>
           <tr><td>Instalación de equipos</td><td style="text-align: center;">1 mes</td></tr>
           <tr><td>Capacitación y pruebas</td><td style="text-align: center;">1 mes</td></tr>
@@ -399,6 +426,11 @@
       <p style="margin-top: 20px; font-style: italic; color: var(--gray);">
         En 6 meses, la UTA contará con su primer canal universitario de señal abierta al servicio de la comunidad y la formación académica.
       </p>
+
+      <!-- Texto añadido: Pago por Título Habilitante -->
+      <div class="highlight" style="margin-top: 25px;">
+        <strong>Pago Único por Título Habilitante de Frecuencia: $7,000</strong>
+      </div>
     </div>
 
     <div class="tab-content" id="matrices">
@@ -501,7 +533,7 @@
       <h2>Distribución del Presupuesto y Programación</h2>
       <div class="graficos-grid">
         <div>
-          <h3>Distribución del Presupuesto Total (US$250,000)</h3>
+          <h3>Distribución del Presupuesto para la Implementación técnica (US$250,000)</h3>
           <div class="chart-container">
             <canvas id="presupuestoChart"></canvas>
           </div>
@@ -544,6 +576,12 @@
         tab.classList.add('active');
         document.getElementById(tab.dataset.tab).classList.add('active');
       });
+    });
+
+    // Botón para revelar beneficios
+    document.getElementById('showBenefitsBtn').addEventListener('click', () => {
+      document.getElementById('benefits-hidden').style.display = 'block';
+      document.getElementById('showBenefitsBtn').style.display = 'none';
     });
 
     // --- GRÁFICOS ORIGINALES ---
